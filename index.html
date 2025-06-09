@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disco Dance Floor Explorer - CPE 471 Final Project</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #4a5568;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        h2 {
+            color: #2d3748;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #4a5568;
+            margin-top: 25px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .tech-list {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+            margin: 20px 0;
+        }
+        .tech-list ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+        }
+        .tech-list li {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-left: 3px solid #48bb78;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+        }
+        .controls-section {
+            background: #edf2f7;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .control-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .control-key {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .feature-card h4 {
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+        .references {
+            background: #f0fff4;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #48bb78;
+        }
+        .references a {
+            color: #2b6cb0;
+            text-decoration: none;
+        }
+        .references a:hover {
+            text-decoration: underline;
+        }
+        .emoji {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🕺 Disco Dance Floor Explorer 🌀</h1>
+        <p class="subtitle">An Interactive 3D World with Advanced Camera Systems, Collision Detection, and Narrative Elements</p>
+        
+        <h2>📋 Project Description</h2>
+        <p>
+            The Disco Dance Floor Explorer is a comprehensive 3D interactive application that combines multiple advanced computer graphics techniques into a cohesive, narrative-driven experience. The project features a vibrant disco dance floor surrounded by a natural environment, where animated robots dance while a dramatic chase sequence unfolds between a mystical portal and the safety of the disco floor.
+        </p>
+        
+        <p>
+            What sets this project apart is its integration of <strong>three distinct camera modes</strong>: free exploration, cinematic tours, and an immersive first-person perspective that lets you experience the chase from the robot's point of view. The world comes alive with collision detection, particle effects, and interactive feedback systems that respond to user proximity.
+        </p>
+
+        <h2>🔧 Key Graphics Technologies</h2>
+        <div class="tech-list">
+            <ul>
+                <li><span class="emoji">🎥</span> <strong>Multi-Modal Camera System</strong> - Free, Cinematic, First-Person modes</li>
+                <li><span class="emoji">🤖</span> <strong>Hierarchical Animation</strong> - 20+ joint robot with detailed movement</li>
+                <li><span class="emoji">🚫</span> <strong>Collision Detection</strong> - Camera collision with trees and portal</li>
+                <li><span class="emoji">💡</span> <strong>Blinn-Phong Lighting</strong> - Realistic ambient, diffuse, specular lighting</li>
+                <li><span class="emoji">🎨</span> <strong>Advanced Material System</strong> - 10 different materials with cycling</li>
+                <li><span class="emoji">✨</span> <strong>Particle Effects</strong> - Portal energy with multiple particle types</li>
+                <li><span class="emoji">🌍</span> <strong>Complex Environment</strong> - Ground plane, skybox, nature objects</li>
+                <li><span class="emoji">🎯</span> <strong>Multiple Shader Programs</strong> - Basic, Blinn-Phong, Texture, Skybox</li>
+                <li><span class="emoji">🖼️</span> <strong>Texture Mapping</strong> - Matte grass with proper filtering</li>
+                <li><span class="emoji">📐</span> <strong>Spatial Reasoning</strong> - Interactive proximity detection</li>
+                <li><span class="emoji">🎪</span> <strong>Sound Wave Visualization</strong> - Visual audio feedback system</li>
+                <li><span class="emoji">🎬</span> <strong>Narrative Elements</strong> - Portal → Chase → Safety sequence</li>
+            </ul>
+        </div>
+
+        <h2>🎮 Controls & Features</h2>
+        <div class="controls-section">
+            <div class="controls-grid">
+                <div class="control-item">
+                    <div class="control-key">WASD</div>
+                    <div>Camera movement with collision detection</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">Mouse</div>
+                    <div>360-degree look around</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">G</div>
+                    <div>Toggle cinematic tour mode</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">C</div>
+                    <div>First-person robot camera</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">M</div>
+                    <div>Cycle through 10 materials</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">R</div>
+                    <div>Reset entire scene</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">Z</div>
+                    <div>Toggle wireframe mode</div>
+                </div>
+                <div class="control-item">
+                    <div class="control-key">Q/E</div>
+                    <div>Move light left/right</div>
+                </div>
+            </div>
+        </div>
+
+        <h2>🎯 Advanced Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h4>🎥 Triple Camera System</h4>
+                <p>Free exploration, automated cinematic tours, and immersive first-person robot perspective with realistic head bobbing.</p>
+            </div>
+            <div class="feature-card">
+                <h4>🤖 Hierarchical Animation</h4>
+                <p>Detailed robot models with 20+ animated joints including fingers, arms, legs, and head movements.</p>
+            </div>
+            <div class="feature-card">
+                <h4>🚫 Collision Detection</h4>
+                <p>Invisible collision system prevents camera from clipping through trees and portal with helpful feedback messages.</p>
+            </div>
+            <div class="feature-card">
+                <h4>✨ Particle Effects</h4>
+                <p>Enhanced portal particle system with three particle types: energy swirls, golden sparkles, and mystic mist.</p>
+            </div>
+            <div class="feature-card">
+                <h4>🎭 Interactive Narrative</h4>
+                <p>Dynamic story sequence: Portal activation → Robot escape → Baldi chase → Disco floor safety.</p>
+            </div>
+            <div class="feature-card">
+                <h4>🌊 Sound Wave Visualization</h4>
+                <p>Visual audio feedback with expanding rings when approaching disco floor or portal areas.</p>
+            </div>
+        </div>
+
+        <h2>🖼️ Project Gallery</h2>
+        <div class="image-gallery">
+            <div class="image-container">
+                <img src="main_view.png" alt="Main disco floor view showing colorful tiles and dancing robots">
+                <div class="image-caption">Main Scene - Disco floor with dancing robots and surrounding nature</div>
+            </div>
+            <div class="image-container">
+                <img src="portal_view.png" alt="Portal structure with particle effects">
+                <div class="image-caption">Mystical Portal - Source of the chase sequence with particle effects</div>
+            </div>
+            <div class="image-container">
+                <img src="first_person.png" alt="First-person robot camera view">
+                <div class="image-caption">First-Person Mode - Experience the chase from robot's perspective</div>
+            </div>
+            <div class="image-container">
+                <img src="chase_sequence.png" alt="Robot running from Baldi toward disco floor">
+                <div class="image-caption">Chase Sequence - Lilac robot escaping from black Baldi</div>
+            </div>
+            <div class="image-container">
+                <img src="cinematic_tour.png" alt="Cinematic camera tour view">
+                <div class="image-caption">Cinematic Tour - Automated camera movements for presentation</div>
+            </div>
+            <div class="image-container">
+                <img src="material_cycling.png" alt="Different material variations on disco tiles">
+                <div class="image-caption">Material System - 10 different materials with cycling capability</div>
+            </div>
+        </div>
+
+        <h2>🎬 Technical Implementation</h2>
+        <h3>Rendering Pipeline</h3>
+        <p>
+            The application uses multiple shader programs to achieve different visual effects:
+            <strong>Blinn-Phong shaders</strong> provide realistic lighting for the disco tiles and nature objects,
+            <strong>texture shaders</strong> render the matte grass ground plane,
+            <strong>skybox shaders</strong> create the atmospheric background, and
+            <strong>basic shaders</strong> handle particle effects and collision visualization.
+        </p>
+
+        <h3>Animation System</h3>
+        <p>
+            The hierarchical robot animation system features detailed joint-by-joint animation with realistic
+            walking cycles, arm swinging, finger movement, and head bobbing. Different animation intensities
+            respond to the narrative state - calm dancing, urgent running, or panicked fleeing.
+        </p>
+
+        <h3>Camera Innovation</h3>
+        <p>
+            The three-camera system represents the project's most innovative feature. The first-person mode
+            includes dynamic head bobbing, nervous glances during chase sequences, and adaptive viewing
+            directions based on the robot's emotional state.
+        </p>
+
+        <h2>📚 References & Resources</h2>
+        <div class="references">
+            <ul>
+                <li><a href="http://users.csc.calpoly.edu/~zwood/">Professor Zoë Wood's Course Materials</a> - OpenGL fundamentals and shader programming</li>
+                <li><a href="https://learnopengl.com/">Learn OpenGL</a> - Advanced lighting techniques and camera systems</li>
+                <li><a href="https://github.com/syoyo/tinyobjloader">TinyOBJ Loader</a> - 3D model loading library</li>
+                <li><a href="https://glm.g-truc.net/">GLM Mathematics Library</a> - Vector and matrix operations</li>
+                <li><a href="https://www.opengl-tutorial.org/">OpenGL Tutorial</a> - Particle systems and collision detection</li>
+                <li><strong>3D Models:</strong> Robot mesh, Baldi character, Portal structure, Nature pack objects</li>
+                <li><strong>Textures:</strong> Grass texture, character textures with fallback generation</li>
+                <li><strong>Inspiration:</strong> Modern game camera systems and interactive storytelling</li>
+            </ul>
+        </div>
+
+        <h2>🏆 Project Achievements</h2>
+        <p>
+            This project successfully demonstrates mastery of multiple computer graphics concepts while
+            creating an engaging, interactive experience. The integration of advanced camera systems,
+            realistic animation, collision detection, and narrative elements represents a comprehensive
+            understanding of 3D graphics programming and interactive application development.
+        </p>
+
+        <p>
+            The disco dance floor explorer showcases technical innovation through its multi-modal camera
+            system and creative problem-solving through visual audio feedback and enhanced particle effects.
+            Most importantly, it demonstrates that computer graphics can be both technically sophisticated
+            and genuinely fun to experience.
+        </p>
+
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: linear-gradient(45deg, #667eea, #764ba2); color: white; border-radius: 10px;">
+            <h3>🎉 Thank you for exploring the Disco Dance Floor! 🕺</h3>
+            <p><em>Where computer graphics meets interactive storytelling</em></p>
+        </div>
+    </div>
+</body>
+</html>
